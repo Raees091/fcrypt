@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fcrypt-tui"
+version = "1.0.0"
+description = "A terminal TUI to encrypt and decrypt files (text, images, PDF, documents) with AES-256-GCM."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "fcrypt" }]
+keywords = ["encryption", "tui", "curses", "aes", "files", "cli"]
+classifiers = [
+    "Environment :: Console :: Curses",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "cryptography>=42.0",
+    "windows-curses; platform_system=='Windows'"
+]
+
+[project.urls]
+Homepage = "https://example.com/fcrypt"
+
+# This is what makes `fcrypt` available system-wide as a command.
+[project.scripts]
+fcrypt = "fcrypt.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fcrypt"]
