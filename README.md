@@ -1,4 +1,4 @@
-# fcrypt
+# Fcrypt
 
 **Simple, secure file encryption from your terminal.**
 
