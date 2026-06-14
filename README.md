@@ -33,7 +33,7 @@ Built for Linux with a minimal dependency footprint and a keyboard-driven interf
 
 ## Screenshots
 
-Add screenshots or terminal recordings here.
+![Screenshot](screenshots/fcrypt_TUI.png)
 
 ```text
 fcrypt enc document.pdf
